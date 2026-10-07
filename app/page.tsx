@@ -9,12 +9,12 @@ const featuredProducts = [
 ];
 
 const collections = [
-  ["01", "DECORATIVE", "Sculptural light with a point of view."],
-  ["02", "ARCHITECTURAL", "Integrated illumination for precise spaces."],
-  ["03", "FUNCTIONAL", "Performance-first light, refined."],
-  ["04", "KINETIC", "Light that changes with the environment."],
-  ["05", "OUTDOOR", "Built for architecture beyond the envelope."],
-  ["06", "BESPOKE", "Designed when the standard is not enough."],
+  ["01", "DECORATIVE", "Sculptural light with a point of view.", "SCULPTURAL"],
+  ["02", "ARCHITECTURAL", "Integrated illumination for precise spaces.", "ARCHITECTURAL"],
+  ["03", "FUNCTIONAL", "Performance-first light, refined.", "PERFORMANCE"],
+  ["04", "KINETIC", "Light that changes with the environment.", "DYNAMIC"],
+  ["05", "OUTDOOR", "Built for architecture beyond the envelope.", "EXTERIOR"],
+  ["06", "BESPOKE", "Designed when the standard is not enough.", "CUSTOM"],
 ];
 
 export default function Home() {
@@ -77,10 +77,32 @@ export default function Home() {
           <p>Distinct typologies. One LunnArk standard.</p>
         </div>
         <div className="collection-grid">
-          {collections.map(([number, title, copy]) => (
-            <article className="collection-card reveal" key={number}>
-              <div className="card-number">{number}</div><div className="card-light parallax-light" />
-              <div><p>{title}</p><span>{copy}</span></div>
+          {collections.map(([number, title, copy, tag]) => (
+            <article className="collection-card collection-enhanced reveal" key={number}>
+              <div className="card-top"><span className="card-number">{number}</span><span className="collection-tag">{tag}</span></div>
+              <div className="collection-orb parallax-light"><i /></div>
+              <div className="collection-info"><p>{title}</p><span>{copy}</span><a href="#products">VIEW COLLECTION ↗</a></div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section id="products" className="product-finder section-light">
+        <div className="section-index">03A / PRODUCT FINDER</div>
+        <div className="finder-head reveal">
+          <div><p className="eyebrow">SPECIFY WITH CONFIDENCE</p><h2>FIND THE<br /><em>RIGHT LIGHT.</em></h2></div>
+          <p>Start with the lighting language. Move from collection to product, specification and project support.</p>
+        </div>
+        <div className="finder-filters reveal">
+          {["ALL", "DECORATIVE", "ARCHITECTURAL", "FUNCTIONAL", "KINETIC", "OUTDOOR"].map((filter, i) => (
+            <button className={i === 0 ? "active" : ""} key={filter}>{filter}</button>
+          ))}
+        </div>
+        <div className="finder-products">
+          {featuredProducts.map(([name, type, image], i) => (
+            <article className="finder-product reveal" key={name}>
+              <div className="finder-image"><img src={image} alt={name} loading="lazy" /></div>
+              <div className="finder-copy"><span>0{i + 1} / {type}</span><strong>{name}</strong><p>Product detail / technical specification / finishes</p><a href="#contact">SPECIFY ↗</a></div>
             </article>
           ))}
         </div>
