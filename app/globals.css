@@ -80,3 +80,37 @@
 .finder-copy a{font-size:9px;letter-spacing:.14em;border-bottom:1px solid var(--dark-line);padding-bottom:4px}
 @media(max-width:900px){.finder-head{display:block}.finder-head>p{margin-top:28px}.finder-products{grid-template-columns:1fr 1fr}}
 @media(max-width:620px){.finder-products{grid-template-columns:1fr}.finder-image{height:360px}.finder-filters{overflow-x:auto;flex-wrap:nowrap}}
+
+.product-page{min-height:100vh}
+.product-header{position:absolute;top:0;left:0;right:0;z-index:5;display:flex;justify-content:space-between;padding:28px 5vw;font-size:10px;letter-spacing:.16em}
+.product-hero{min-height:100vh;padding:140px 5vw 90px;display:grid;grid-template-columns:1.2fr .8fr;gap:6vw;align-items:center}
+.product-visual{height:650px;display:grid;place-items:center;position:relative;background:radial-gradient(circle,rgba(216,192,154,.1),transparent 55%)}
+.product-visual>span{position:absolute;left:0;bottom:0;font-size:9px;letter-spacing:.15em;opacity:.38}
+.product-ring{width:min(38vw,520px);aspect-ratio:1;border-radius:50%;border:1px solid rgba(216,192,154,.45);display:grid;place-items:center;box-shadow:0 0 130px rgba(216,192,154,.12),inset 0 0 80px rgba(216,192,154,.06)}
+.product-ring:before,.product-ring:after{content:"";position:absolute;width:28%;aspect-ratio:1;border-radius:50%;border:1px solid rgba(255,255,255,.16)}
+.product-ring:after{width:48%;border-color:rgba(216,192,154,.2)}
+.product-ring i{width:10%;aspect-ratio:1;border-radius:50%;background:#f0dfbd;box-shadow:0 0 80px 25px rgba(216,192,154,.35)}
+.product-intro h1{margin:18px 0 25px;font-size:clamp(65px,8vw,125px);line-height:.84;letter-spacing:-.07em;font-weight:500}
+.product-intro>p:not(.eyebrow){max-width:500px;line-height:1.7;opacity:.58}
+.product-intro .button{margin-top:38px}
+.product-config{padding:110px 5vw}
+.config-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;margin-top:55px}
+.option-grid{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.option{background:transparent;border:1px solid var(--line);color:inherit;padding:13px 15px;font:inherit;font-size:9px;letter-spacing:.11em;cursor:pointer}
+.option.active,.option:hover{background:var(--paper);color:var(--ink)}
+.config-summary{margin-top:65px;padding-top:22px;border-top:1px solid var(--line);display:grid;grid-template-columns:1fr 2fr 1fr 2fr;gap:15px;font-size:10px;letter-spacing:.1em}
+.config-summary span{opacity:.4}.config-summary strong{font-weight:500}
+.technical{padding:130px 5vw}
+.technical-layout{display:grid;grid-template-columns:1fr 1fr;gap:8vw;margin-top:55px}
+.technical-layout h2,.enquiry-layout h2{font-size:clamp(52px,7vw,105px);line-height:.9;letter-spacing:-.06em;font-weight:500;margin:12px 0}
+.technical-copy{max-width:420px;line-height:1.7;opacity:.55;margin-top:30px}
+.spec-table{border-top:1px solid var(--dark-line)}
+.spec-row{display:grid;grid-template-columns:1fr 1.4fr;gap:20px;padding:18px 0;border-bottom:1px solid var(--dark-line);font-size:11px}
+.spec-row span{opacity:.45}.spec-row strong{font-weight:500}
+.downloads{display:flex;gap:35px;margin-top:70px;padding-top:20px;border-top:1px solid var(--dark-line)}
+.downloads a{font-size:9px;letter-spacing:.13em}
+.product-enquiry{padding:130px 5vw;min-height:65vh}
+.enquiry-layout{display:grid;grid-template-columns:1fr 1fr;gap:8vw;margin-top:55px;align-items:end}
+.enquiry-layout>div:last-child{max-width:430px}.enquiry-layout p:not(.eyebrow){line-height:1.7;opacity:.55}.enquiry-layout .button{margin-top:30px}
+@media(max-width:800px){.product-hero,.technical-layout,.enquiry-layout{grid-template-columns:1fr}.product-visual{height:480px}.product-ring{width:72vw}.config-grid{grid-template-columns:1fr}.config-summary{grid-template-columns:1fr 2fr}.downloads{flex-wrap:wrap}}
+@media(max-width:620px){.product-header{padding:22px 20px}.product-hero,.product-config,.technical,.product-enquiry{padding-left:20px;padding-right:20px}.product-hero{padding-top:110px}.product-visual{height:380px}.product-intro h1{font-size:65px}.config-summary{grid-template-columns:1fr 1fr;gap:12px}.downloads{gap:20px}}
