@@ -106,9 +106,17 @@ export default function Home() {
           <div><p className="eyebrow">LIGHTING, IN CONTEXT</p><h2>BUILT FOR<br /><em>REAL SPACES.</em></h2></div>
           <p>Corporate, hospitality, retail and high-performance environments.</p>
         </div>
-        <div className="project-band">
-          {["CORPORATE", "HOSPITALITY", "RETAIL", "HEALTHCARE"].map((item, i) => (
-            <div className="project-panel" key={item}><span>0{i + 1}</span><strong>{item}</strong><small>CASE STUDY ↗</small></div>
+        <div className="case-grid">
+          {[
+            ["01", "CORPORATE", "WIPRO", "A lighting language for high-performance workspaces.", "https://www.lunnark.com/assets/images/home/projects/wipro.jpg"],
+            ["02", "RETAIL", "WALMART", "Uniform illumination, controlled glare and visual hierarchy.", "https://www.lunnark.com/assets/images/home/projects/walmart.jpg"],
+            ["03", "HOSPITALITY", "SELECTED INTERIORS", "Atmosphere designed around arrival, pause and movement.", "https://www.lunnark.com/assets/images/home/projects/hospitality.jpg"],
+            ["04", "HEALTHCARE", "PRECISION SPACES", "Technical lighting where comfort and performance meet.", "https://www.lunnark.com/assets/images/home/projects/healthcare.jpg"]
+          ].map(([number, type, name, copy, image]) => (
+            <article className="case-card reveal" key={number}>
+              <div className="case-image"><img src={image} alt={name} loading="lazy" /></div>
+              <div className="case-overlay"><span>{number} / {type}</span><strong>{name}</strong><p>{copy}</p><small>VIEW CASE STUDY ↗</small></div>
+            </article>
           ))}
         </div>
       </section>
