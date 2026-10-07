@@ -1,7 +1,11 @@
 # LunnArk Website
 
-Initial cinematic redesign scaffold for LunnArk.
+Cinematic redesign for LunnArk — architectural lighting engineered for extraordinary spaces.
 
-Figma source: https://www.figma.com/design/qxzzv20GLovMXKd7a9cq3P
+## Stack
 
-Run with `npm install && npm run dev`.
+Next.js · TypeScript · React · Three.js / React Three Fiber · GSAP · Lenis · Framer Motion
+
+## Design source
+
+Figma: https://www.figma.com/design/qxzzv20GLovMXKd7a9cq3P
