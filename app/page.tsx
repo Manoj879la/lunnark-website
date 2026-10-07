@@ -136,7 +136,7 @@ export default function Home() {
             ["04", "HEALTHCARE", "PRECISION SPACES", "Technical lighting where comfort and performance meet.", "healthcare"]
           ].map(([number, type, name, copy, image]) => (
             <article className="case-card reveal" key={number}>
-              <div className={`case-image case-function () { [native code] }`}><div className="case-glow" /><span>LIGHT / SPACE</span></div>
+              <div className={`case-image case-${image}`}><div className="case-glow" /><span>LIGHT / SPACE</span></div>
               <div className="case-overlay"><span>{number} / {type}</span><strong>{name}</strong><p>{copy}</p><small>VIEW CASE STUDY ↗</small></div>
             </article>
           ))}
