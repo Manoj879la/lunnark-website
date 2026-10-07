@@ -9,3 +9,5 @@ Next.js · TypeScript · React · Three.js / React Three Fiber · GSAP · Lenis 
 ## Design source
 
 Figma: https://www.figma.com/design/qxzzv20GLovMXKd7a9cq3P
+
+<!-- build diagnosis -->
