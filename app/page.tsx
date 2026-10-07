@@ -2,6 +2,12 @@ import { LightOrb } from "@/components/light-orb";
 import { LightingScene } from "@/components/lighting-scene";
 import { ScrollExperience } from "@/components/scroll-experience";
 
+const featuredProducts = [
+  ["COSMIC DOME", "Perforated dome luminaire", "https://www.lunnark.com/assets/images/home/new-products/DS-42-Cosmic-Dome-1.png"],
+  ["ECHODISK", "Acoustic pendant luminaire", "https://www.lunnark.com/assets/images/home/new-products/AO19_Acous_Disk.png"],
+  ["BUBBLE", "Custom floor-mounted luminaire", "https://www.lunnark.com/assets/images/home/new-products/DS-64-Bubble.png"],
+];
+
 const collections = [
   ["01", "DECORATIVE", "Sculptural light with a point of view."],
   ["02", "ARCHITECTURAL", "Integrated illumination for precise spaces."],
