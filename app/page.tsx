@@ -108,13 +108,13 @@ export default function Home() {
         </div>
         <div className="case-grid">
           {[
-            ["01", "CORPORATE", "WIPRO", "A lighting language for high-performance workspaces.", "https://www.lunnark.com/assets/images/home/projects/wipro.jpg"],
-            ["02", "RETAIL", "WALMART", "Uniform illumination, controlled glare and visual hierarchy.", "https://www.lunnark.com/assets/images/home/projects/walmart.jpg"],
-            ["03", "HOSPITALITY", "SELECTED INTERIORS", "Atmosphere designed around arrival, pause and movement.", "https://www.lunnark.com/assets/images/home/projects/hospitality.jpg"],
-            ["04", "HEALTHCARE", "PRECISION SPACES", "Technical lighting where comfort and performance meet.", "https://www.lunnark.com/assets/images/home/projects/healthcare.jpg"]
+            ["01", "CORPORATE", "WIPRO", "A lighting language for high-performance workspaces.", "wipro"],
+            ["02", "RETAIL", "WALMART", "Uniform illumination, controlled glare and visual hierarchy.", "walmart"],
+            ["03", "HOSPITALITY", "SELECTED INTERIORS", "Atmosphere designed around arrival, pause and movement.", "hospitality"],
+            ["04", "HEALTHCARE", "PRECISION SPACES", "Technical lighting where comfort and performance meet.", "healthcare"]
           ].map(([number, type, name, copy, image]) => (
             <article className="case-card reveal" key={number}>
-              <div className="case-image"><img src={image} alt={name} loading="lazy" /></div>
+              <div className={`case-image case-function () { [native code] }`}><div className="case-glow" /><span>LIGHT / SPACE</span></div>
               <div className="case-overlay"><span>{number} / {type}</span><strong>{name}</strong><p>{copy}</p><small>VIEW CASE STUDY ↗</small></div>
             </article>
           ))}
