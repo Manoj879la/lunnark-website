@@ -19,12 +19,12 @@ const collections = ["Decorative", "Functional", "Kinetic", "Mounting"];
 const applications = ["Corporate", "Hospitality", "Retail", "Healthcare", "Education", "Residential"];
 
 export default function Home() {
-  const [media, setMedia] = useState(defaultMedia);
+  const [media, setMedia] = useState(defaultMedia);\n  const [emblem, setEmblem] = useState("");\n  const [artisans, setArtisans] = useState(["Design & R&D","CNC & Fabrication","Finishing & Powder Coat","LED Integration","Assembly & Testing","Quality & Inspection","Project Installation"]);
 
   useEffect(() => {
     try {
       const saved = localStorage.getItem("lunnark-home-media");
-      if (saved) setMedia(JSON.parse(saved));
+      if (saved) setMedia(JSON.parse(saved));\n      const savedEmblem = localStorage.getItem("lunnark-emblem");\n      if (savedEmblem) setEmblem(savedEmblem);\n      const savedArtisans = localStorage.getItem("lunnark-artisans");\n      if (savedArtisans) setArtisans(JSON.parse(savedArtisans));
     } catch {}
   }, []);
 
@@ -118,7 +118,7 @@ export default function Home() {
       <section className="craftsmanship">
         <div className="craft-head"><span>06 / CRAFTSMANSHIP OF LIGHT</span><h2>ENGINEERED BY<br /><em>PEOPLE.</em></h2><p>Behind every luminaire is a team of designers, engineers, fabricators, technicians and quality professionals turning material into light.</p></div>
         <div className="craft-slider">
-          {["Design & R&D","CNC & Fabrication","Finishing & Powder Coat","LED Integration","Assembly & Testing","Quality & Inspection","Project Installation"].map((x,i)=><article key={x}><div className="craft-image" style={{backgroundImage:"url(https://www.lunnark.com/assets/images/home/new-products/DS-42-Cosmic-Dome-1.png)"}}><span>0{i+1}</span></div><strong>{x}</strong><small>TEAM LUNNARK</small></article>)}
+          {[...artisans,...artisans].map((x,i)=><article key={x+i}><div className="craft-image" style={{backgroundImage:`url(${media[i % media.length]?.src || defaultMedia[0].src})`}}><span>0{(i%artisans.length)+1}</span></div><strong>{x}</strong><small>TEAM LUNNARK</small></article>)}
         </div>
         <div className="artisan-marquee"><div>{["Designers","Lighting Engineers","Mechanical Engineers","CNC Fabricators","Powder Coating Specialists","LED Technicians","Assemblers","Quality Engineers","Installation Teams"].map(x=><span key={x}>{x} <i>✦</i></span>)}</div></div>
       </section>
