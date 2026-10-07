@@ -1,4 +1,6 @@
 import { LightOrb } from "@/components/light-orb";
+import { LightingScene } from "@/components/lighting-scene";
+import { ScrollExperience } from "@/components/scroll-experience";
 
 const collections = [
   ["01", "DECORATIVE", "Sculptural light with a point of view."],
@@ -11,7 +13,7 @@ const collections = [
 
 export default function Home() {
   return (
-    <main>
+    <main><ScrollExperience />
       <section className="hero section-dark">
         <header className="site-header">
           <div className="wordmark">LUNNARK</div>
@@ -27,7 +29,7 @@ export default function Home() {
 
         <div className="hero-light"><LightOrb /></div>
 
-        <div className="hero-copy">
+        <div className="hero-copy reveal">
           <p className="eyebrow">LUNNARK / LIGHTING SYSTEMS</p>
           <h1>LIGHT,<br />SCULPTED.</h1>
           <p className="hero-body">Architectural lighting engineered for extraordinary spaces.</p>
@@ -50,12 +52,12 @@ export default function Home() {
 
       <section id="studio" className="studio section-dark">
         <div className="section-index">02 / THE STUDIO</div>
-        <div className="studio-copy">
+        <div className="studio-copy reveal">
           <p className="eyebrow">DESIGN / ENGINEERING / MANUFACTURING</p>
           <h2>FROM IDEA<br />TO <span>LIGHT.</span></h2>
           <p>One integrated process. Materials, optics, fabrication, testing and installation under one LunnArk standard.</p>
         </div>
-        <div className="process-grid">
+        <div className="process-grid reveal">
           {["IDEA", "DESIGN", "ENGINEERING", "MANUFACTURING", "ASSEMBLY", "QUALITY"].map((item, i) => (
             <div className="process-item" key={item}><span>0{i + 1}</span><strong>{item}</strong></div>
           ))}
@@ -64,14 +66,14 @@ export default function Home() {
 
       <section id="collections" className="collections section-mid">
         <div className="section-index">03 / THE COLLECTIONS</div>
-        <div className="section-heading">
+        <div className="section-heading reveal">
           <div><p className="eyebrow">SIX LIGHTING LANGUAGES</p><h2>LIGHT, WITH A<br /><em>POINT OF VIEW.</em></h2></div>
           <p>Distinct typologies. One LunnArk standard.</p>
         </div>
         <div className="collection-grid">
           {collections.map(([number, title, copy]) => (
-            <article className="collection-card" key={number}>
-              <div className="card-number">{number}</div><div className="card-light" />
+            <article className="collection-card reveal" key={number}>
+              <div className="card-number">{number}</div><div className="card-light parallax-light" />
               <div><p>{title}</p><span>{copy}</span></div>
             </article>
           ))}
@@ -80,11 +82,11 @@ export default function Home() {
 
       <section id="bespoke" className="bespoke section-dark">
         <div className="section-index">04 / BESPOKE</div>
-        <div className="bespoke-layout">
+        <div className="bespoke-layout reveal">
           <div><p className="eyebrow">CUSTOM LUMINAIRES</p><h2>IF IT DOESN&apos;T EXIST,<br /><em>WE DESIGN IT.</em></h2></div>
           <p className="bespoke-intro">For architects, designers and brands with a precise idea. We translate intent into a manufacturable, testable and installable lighting system.</p>
         </div>
-        <div className="bespoke-steps">
+        <div className="bespoke-steps reveal">
           {["IMAGINE", "DESIGN", "PROTOTYPE", "ENGINEER", "MANUFACTURE", "INSTALL"].map((step, i) => (
             <div key={step}><span>0{i + 1}</span><strong>{step}</strong></div>
           ))}
@@ -112,18 +114,18 @@ export default function Home() {
           <h2>BORN IN BENGALURU.<br /><em>BUILT FOR THE WORLD.</em></h2>
           <p className="origin-body">A 20,000+ sq. ft. manufacturing environment where design approval flows through engineering, fabrication, quality and installation.</p>
         </div>
-        <div className="origin-stat"><strong>20,000+</strong><span>SQ. FT. MANUFACTURING FACILITY</span></div>
+        <div className="origin-stat reveal"><strong>20,000+</strong><span>SQ. FT. MANUFACTURING FACILITY</span></div>
       </section>
 
       <section id="contact" className="contact section-mid">
         <div className="section-index">07 / YOUR PROJECT</div>
-        <div className="contact-main">
+        <div className="contact-main reveal">
           <p className="eyebrow">LET&apos;S MAKE SOMETHING GLOW</p>
           <h2>WHAT WILL<br /><em>YOU LIGHT?</em></h2>
           <a className="button button-dark" href="mailto:hello@lunnark.com">Start a Project ↗</a>
         </div>
         <footer><span>LUNNARK / LIGHT, SCULPTED.</span><span>BENGALURU / INDIA</span></footer>
       </section>
-    </main>
+    <section className="scene-stage section-dark"><div className="section-index">08 / LIGHT AS OBJECT</div><div className="scene-copy reveal"><p className="eyebrow">INTERACTIVE STUDY</p><h2>LIGHT<br /><em>IN MOTION.</em></h2><p>WebGL becomes the foundation for product-scale lighting interactions, material studies and future 3D configurators.</p></div><LightingScene /></section></main>
   );
 }
