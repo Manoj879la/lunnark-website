@@ -13,27 +13,27 @@ const heroSlides = [
     image:"https://www.lunnark.com/assets/images/home/new-products/AO19_Acous_Disk.png",
     title:"Echodisk",
     text:"Echodisk is a designer acoustic luminaire with its shape resembling a disk from our collection of acoustic pendant lights. The housing is made of acoustic shade connected to create a homogenous appearance.",
-    href:"https://www.lunnark.com/all"
+    href:"/all"
   },
   {
     image:"https://www.lunnark.com/assets/images/home/new-products/DS-64-Bubble.png",
     title:"Bubble",
     text:"The bubble is a customized luminaire with its shape resembling a set of bubbles floating from our collection of floor mount lights. The housing is fabricated from rolled aluminium and a pair of frosted glass globes.",
-    href:"https://www.lunnark.com/all"
+    href:"/all"
   },
   {
     image:"https://www.lunnark.com/assets/images/home/new-products/AO10_Acous_K.png",
     title:"Conio",
     text:"Conio is a suspended luminaire composed of an acoustic housing with powder-coated outer body finish. Stretch fabric or PMMA diffusers are used to provide spotless and glare-free light distribution.",
-    href:"https://www.lunnark.com/all"
+    href:"/all"
   }
 ];
 
 const products=[
   ["Cosmic Dome","Decorative / Technical","https://www.lunnark.com/assets/images/home/new-products/DS-42-Cosmic-Dome-1.png","/products/cosmic-dome"],
-  ["Echodisk","Acoustic / Pendant","https://www.lunnark.com/assets/images/home/new-products/AO19_Acous_Disk.png","https://www.lunnark.com/all"],
-  ["Bubble","Fabricated / Floor","https://www.lunnark.com/assets/images/home/new-products/DS-64-Bubble.png","https://www.lunnark.com/all"],
-  ["Conio","Acoustic / Suspended","https://www.lunnark.com/assets/images/home/new-products/AO10_Acous_K.png","https://www.lunnark.com/all"]
+  ["Echodisk","Acoustic / Pendant","https://www.lunnark.com/assets/images/home/new-products/AO19_Acous_Disk.png","/all"],
+  ["Bubble","Fabricated / Floor","https://www.lunnark.com/assets/images/home/new-products/DS-64-Bubble.png","/all"],
+  ["Conio","Acoustic / Suspended","https://www.lunnark.com/assets/images/home/new-products/AO10_Acous_K.png","/all"]
 ];
 
 const blogs=[
@@ -49,15 +49,15 @@ function Header(){
     <nav>
       <a href="/">Home</a>
       <a href="/bespoke">Bespoke</a>
-      <div className="nav-drop"><button>Products <i>⌄</i></button><div><a href="https://www.lunnark.com/all">All</a><a href="https://www.lunnark.com/all/decorative">Decorative</a><a href="https://www.lunnark.com/all/functional">Functional</a><a href="https://www.lunnark.com/all/kinetic">Kinetic</a><a href="https://www.lunnark.com/all/mounting">Mounting</a></div></div>
-      <div className="nav-drop"><button>Projects <i>⌄</i></button><div><a href="https://www.lunnark.com/projects">All Projects</a><a href="https://www.lunnark.com/video_gallery">Video Gallery</a></div></div>
-      <div className="nav-drop"><button>Resources <i>⌄</i></button><div><a href="https://www.lunnark.com/resources">Catalogue</a><a href="https://www.lunnark.com/resources">Brochures</a><a href="https://www.lunnark.com/patents">Patents</a><a href="https://www.lunnark.com/make_in_india">Make in India</a></div></div>
-      <a href="https://www.lunnark.com/sustainability">Sustainability</a>
-      <a href="https://www.lunnark.com/blogs">Blogs</a>
-      <div className="nav-drop"><button>About Us <i>⌄</i></button><div><a href="https://www.lunnark.com/about">About Lunnark</a><a href="https://www.lunnark.com/news-events">News &amp; Events</a></div></div>
+      <div className="nav-drop"><button>Products <i>⌄</i></button><div><a href="/all">All</a><a href="/all/decorative">Decorative</a><a href="/all/functional">Functional</a><a href="/all/kinetic">Kinetic</a><a href="/all/mounting">Mounting</a></div></div>
+      <div className="nav-drop"><button>Projects <i>⌄</i></button><div><a href="/projects">All Projects</a><a href="/video_gallery">Video Gallery</a></div></div>
+      <div className="nav-drop"><button>Resources <i>⌄</i></button><div><a href="/resources">Catalogue</a><a href="/resources">Brochures</a><a href="/patents">Patents</a><a href="/make_in_india">Make in India</a></div></div>
+      <a href="/sustainability">Sustainability</a>
+      <a href="/blogs">Blogs</a>
+      <div className="nav-drop"><button>About Us <i>⌄</i></button><div><a href="/about">About Lunnark</a><a href="/news-events">News &amp; Events</a></div></div>
     </nav>
     <a className="clone-contact" href="/contact_us">Contact Us</a>
-    <button className="mobile-menu" aria-label="Menu">☰</button>
+    <a className="mobile-menu" aria-label="Menu" href="/all">☰</a>
   </header>
 }
 
@@ -69,7 +69,7 @@ function Footer(){
        <p>LIGHTING BEYOND SPACES</p>
        <div className="socials"><a href="#">f</a><a href="#">in</a><a href="#">◎</a><a href="#">p</a></div>
      </div>
-     <div><h4>Quick Links</h4><a href="https://www.lunnark.com/all">Products</a><a href="https://www.lunnark.com/resources">Resources</a><a href="/contact_us">Contact Us</a><a href="https://www.lunnark.com/terms">Terms &amp; Conditions</a><a href="https://www.lunnark.com/privacy">Privacy</a></div>
+     <div><h4>Quick Links</h4><a href="/all">Products</a><a href="/resources">Resources</a><a href="/contact_us">Contact Us</a><a href="https://www.lunnark.com/terms">Terms &amp; Conditions</a><a href="https://www.lunnark.com/privacy">Privacy</a></div>
      <div><h4>Contact</h4><p>1800 890 2146</p><p>080 - 23507469</p><p>info@lunnark.com</p><p>info@vtechbiotron.com</p><p>sales@lunnark.com</p></div>
      <div><h4>Lunnark Corporate Office</h4><p>#40, 3rd Floor, 2nd Main road,<br/>Rajajnagar Industrial Town,<br/>Magadi Main road, Bengaluru,<br/>Karnataka 560010</p></div>
    </div>
@@ -113,19 +113,19 @@ export default function Home(){
    <section className="collections-section">
      <div className="section-heading centered"><span>EXPLORE OUR COLLECTIONS</span><h2>Explore our collections</h2></div>
      <div className="collections-grid">
-       {["Decorative","Functional","Kinetic","Mounting"].map((x,i)=><a href="https://www.lunnark.com/all" key={x} className={"collection c"+i}><span>0{i+1}</span><h3>{x}</h3><b>Explore →</b></a>)}
+       {["Decorative","Functional","Kinetic","Mounting"].map((x,i)=><a href="/all" key={x} className={"collection c"+i}><span>0{i+1}</span><h3>{x}</h3><b>Explore →</b></a>)}
      </div>
    </section>
 
    <section className="brand-section">
      <div className="brand-visual"><div className="rings"/><img src="https://www.lunnark.com/assets/images/home/new-products/AO10_Acous_K.png" alt="LunnArk lighting"/></div>
-     <div className="brand-copy"><span>ABOUT LUNNARK</span><h2>Lunnark is a global lighting brand born in Bengaluru.</h2><p>LunnArk®️, a pioneering brand by Vtech Biotron Private Limited, offers cutting-edge, integrated LED lighting solutions distinguished by their exceptional design and adherence to benchmark luminaire standards. Our innovative products enhance the visions of architects and lighting designers, providing unparalleled quality and functionality.</p><a href="https://www.lunnark.com/about">Learn More <b>→</b></a></div>
+     <div className="brand-copy"><span>ABOUT LUNNARK</span><h2>Lunnark is a global lighting brand born in Bengaluru.</h2><p>LunnArk®️, a pioneering brand by Vtech Biotron Private Limited, offers cutting-edge, integrated LED lighting solutions distinguished by their exceptional design and adherence to benchmark luminaire standards. Our innovative products enhance the visions of architects and lighting designers, providing unparalleled quality and functionality.</p><a href="/about">Learn More <b>→</b></a></div>
    </section>
 
    <section className="blog-section">
      <div className="section-heading"><span>BLOGS</span><h2>Ideas, inspiration &amp; light</h2><p>Discover our blogs about Lighting designs, creative ideas and unique solutions to your customization preferences.</p></div>
-     <div className="blog-grid">{blogs.map(([date,title],i)=><a className="blog-card" href="https://www.lunnark.com/blogs" key={title}><div className="blog-image"><img src={products[i%products.length][2]} alt="LunnArk blog"/></div><small>{date}</small><h3>{title}</h3><span>Read More <b>→</b></span></a>)}</div>
-     <a className="all-link" href="https://www.lunnark.com/blogs">View all blogs →</a>
+     <div className="blog-grid">{blogs.map(([date,title],i)=><a className="blog-card" href="/blogs" key={title}><div className="blog-image"><img src={products[i%products.length][2]} alt="LunnArk blog"/></div><small>{date}</small><h3>{title}</h3><span>Read More <b>→</b></span></a>)}</div>
+     <a className="all-link" href="/blogs">View all blogs →</a>
    </section>
 
    <section className="contact-strip">
